@@ -28,6 +28,11 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
+"highlight nonascii characters
+highlight nonascii guibg=Red ctermbg=1 term=standout
+au BufReadPost * syntax match nonascii "[^\u0000-\u007F]"
+
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
