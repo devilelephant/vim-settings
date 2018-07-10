@@ -1,0 +1,24 @@
+[submodule "pack/plugins/start/vim-multiple-cursors"]
+	path = pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "pack/plugins/start/tabular"]
+	path = pack/plugins/start/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "pack/plugins/start/matchit.zip"]
+	path = pack/plugins/start/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "pack/plugins/start/ack.vim"]
+	path = pack/plugins/start/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/plugins/start/powerline"]
+	path = pack/plugins/start/powerline
+	url = https://github.com/powerline/powerline.git
+[submodule "pack/plugins/start/vim-json"]
+	path = pack/plugins/start/vim-json
+	url = https://github.com/leshill/vim-json.git
+[submodule "pack/plugins/start/xml.vim"]
+	path = pack/plugins/start/xml.vim
+	url = https://github.com/vim-scripts/xml.vim.git
+[submodule "pack/plugins/start/Solarized"]
+	path = pack/plugins/start/Solarized
+	url = https://github.com/vim-scripts/Solarized.git
