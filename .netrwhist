@@ -1,10 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/georgecoller/.httpie/sessions/search.dev.clario.us'
-let g:netrw_dirhist_2='/Users/georgecoller/Downloads/data/temp'
-let g:netrw_dirhist_3='/Users/georgecoller/.aws'
-let g:netrw_dirhist_4='/Users/georgecoller/Downloads'
-let g:netrw_dirhist_5='/'
-let g:netrw_dirhist_6='/Workspace'
-let g:netrw_dirhist_7='/Workspace/prezto'
-let g:netrw_dirhist_8='/Workspace/prezto/runcoms'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Workspace/vim-settings/plugins/vim-json/syntax'

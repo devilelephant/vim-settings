@@ -13,8 +13,11 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set laststatus=2                "Turn on status bar by default
+set ruler                       "Add row/col info to status bar
 set encoding=utf-8
-let g:Powerline_symbols = 'fancy' " Turn on fancy powerline symbols
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+"let g:Powerline_symbols = 'fancy' " Turn on fancy powerline symbols
 
 if !has('gui_running')
   set clipboard=unnamed
@@ -180,3 +183,50 @@ function! s:diffBufferWithClipboard()
 endfunction
 command! DiffClip call s:diffBufferWithClipboard() 
 command! -nargs=* DiffSplit diffsplit /tmp/diff 
+
+
+
+function! Prose()
+  call pencil#init()
+  call lexical#init()
+  call litecorrect#init()
+  call textobj#quote#init()
+  call textobj#sentence#init()
+
+  " manual reformatting shortcuts
+  nnoremap <buffer> <silent> Q gqap
+  xnoremap <buffer> <silent> Q gq
+  nnoremap <buffer> <silent> <leader>Q vapJgqap
+
+  " force top correction on most recent misspelling
+  nnoremap <buffer> <c-s> [s1z=<c-o>
+  inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
+
+  " replace common punctuation
+  iabbrev <buffer> -- –
+  iabbrev <buffer> --- —
+  iabbrev <buffer> << «
+  iabbrev <buffer> >> »
+
+  " open most folds
+  setlocal foldlevel=6
+
+  " replace typographical quotes (reedes/vim-textobj-quote)
+  map <silent> <buffer> <leader>qc <Plug>ReplaceWithCurly
+  map <silent> <buffer> <leader>qs <Plug>ReplaceWithStraight
+
+  " highlight words (reedes/vim-wordy)
+  noremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+  xnoremap <silent> <buffer> <F8> :<C-u>NextWordy<cr>
+  inoremap <silent> <buffer> <F8> <C-o>:NextWordy<cr>
+
+endfunction
+
+" automatically initialize buffer by file type
+autocmd FileType markdown,mkd,text call Prose()
+
+" invoke manually by command for other file types
+command! -nargs=0 Prose call Prose()
+
+" Comment out if not a fan of hiding quotes in json files
+let g:vim_json_syntax_conceal = 0
