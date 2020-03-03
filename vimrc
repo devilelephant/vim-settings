@@ -136,6 +136,9 @@ else
   set t_Co=16
 endif
 
+highlight Error term=bold,reverse ctermfg=116 ctermbg=160 gui=bold,reverse guifg=#cb4b16 guibg=#99000
+
+
 
 
 " ================ Other ========================
