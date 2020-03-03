@@ -1,5 +1,6 @@
 CLONING
 =======
+cd ~/Workspace
 git clone --recurse-submodules https://github.com/devilelephant/vim-settings.git
 
 
