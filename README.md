@@ -6,13 +6,29 @@ git clone --recurse-submodules https://github.com/devilelephant/vim-settings.git
 
 ADDING SUBMODULES
 =================
+ 
+https://shapeshed.com/vim-packages/
+
 
 cd to plugins
 use command
     git submodule add https://github.com/othree/xml.vim.git
+    git add .gitmodules vim/pack/shapeshed/start/vim-airline 
+    git commit
 
 Notice the change in .gitmodules
 
+UPDATING SUBMODULES 
+===================
+  git submodule update --remote --merge
+  git commit
+
+REMOVING SUBMODULES
+===================
+  git submodule deinit vim/pack/shapeshed/start/vim-airline
+  git rm vim/pack/shapeshed/start/vim-airline rm -Rf
+  .git/modules/vim/pack/shapeshed/start/vim-airline  // Is this needed?
+  git commit
 
 HOW THIS WORKS
 ==============

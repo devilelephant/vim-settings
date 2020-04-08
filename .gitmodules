@@ -38,3 +38,6 @@
 	path = plugins/xml.vim
 	url = https://github.com/othree/xml.vim.git 
 
+[submodule "plugins/vim-json"]
+	path = plugins/vim-json
+	url = https://github.com/elzr/vim-json.git
