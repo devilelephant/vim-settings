@@ -13,9 +13,6 @@
 [submodule "plugins/vim-colors-solarized"]
 	path = plugins/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "plugins/vim-json"]
-	path = plugins/vim-json
-	url = https://github.com/leshill/vim-json
 [submodule "plugins/vim-lexical"]
 	path = plugins/vim-lexical
 	url = https://github.com/reedes/vim-lexical
